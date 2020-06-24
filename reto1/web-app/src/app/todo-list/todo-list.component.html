@@ -1,0 +1,15 @@
+<header class="header">
+  <h1>
+    Tienes <span class="emphasis">{{ numItems }}</span> cosas por hacer
+  </h1>
+</header>
+
+<section>
+  <article>
+    <ul>
+      <li class="todo" *ngFor="let item of items | async">
+        {{ item.title }}
+      </li>
+    </ul>
+  </article>
+</section>

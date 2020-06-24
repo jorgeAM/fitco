@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "db-realtime-d143d": {
+      "hosting": {
+        "web-app": [
+          "db-realtime-d143d"
+        ]
+      }
+    }
+  }
+}
