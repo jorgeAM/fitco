@@ -1,13 +1,13 @@
 const chunk = (array, size) => {
-  if (array.length <= 0) {
-    return [];
+  const result = [];
+  const copy = [...array];
+  const numOfResultLength = Math.ceil(copy.length / size);
+
+  for (let i = 0; i < numOfResultLength; i++) {
+    result.push(copy.splice(0, size));
   }
 
-  return array.reduce(
-    (c, v, i, a) =>
-      i + size <= a.length ? c.concat([a.slice(i, i + size)]) : c,
-    []
-  );
+  return result;
 };
 
 console.log(chunk([1, 2, 4, 5, 6, 7, 8], 5));
